@@ -1,0 +1,25 @@
+:root{
+    /*add fonts and colors here*/
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+.calculator-body{
+    display: grid;
+    height: 35em;
+    width: 25em;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* to center the calcolator body in the center */
+    background-color: white;
+    border-radius: 5px;
+}
