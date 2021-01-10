@@ -1,35 +1,36 @@
 <!DOCTYPE html>
+<!-- @ 0 x A r w a -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="calc_JS.js"></script>
     <link rel="stylesheet" href="calc_styleSheet.css">
+    <script src="calc_JS.js"></script>
     <title>Calculator</title>
 </head>
 <body>
 <div class="calculator-body">
-    <button type="button" class="result btn">.</button>
-    <button type="button" class="one btn2"> 1 </button>
-    <button type="button" class="two btn2">2</button>
-    <button type="button" class="three btn2">3</button>
-    <button type="button" class="four btn2">4</button>
-    <button type="button" class="five btn2">5</button>
-    <button type="button" class="six btn2">6</button>
-    <button type="button" class="seven btn2">7</button>
-    <button type="button" class="eight btn2">8</button>
-    <button type="button" class="nine btn2">9</button>
-    <button type="button" class="zero btn2">0</button>
-    <button type="button" class="plus btn2">+</button>
-    <button type="button" class="minus btn2">-</button>
-    <button type="button" class="product btn2">x</button>
-    <button type="button" class="divition btn2">/</button>
-    <button type="button" class="equals btn2">=</button>
+    <button type="button" class="result btn" id="result" >.</button>
+    <button type="button" class="one btn2" onclick="showDigit(1)"> 1 </button>
+    <button type="button" class="two btn2" onclick="showDigit(2)">2</button>
+    <button type="button" class="three btn2" onclick="showDigit(3)">3</button>
+    <button type="button" class="four btn2" onclick="showDigit(4)">4</button>
+    <button type="button" class="five btn2" onclick="showDigit(5)">5</button>
+    <button type="button" class="six btn2" onclick="showDigit(6)">6</button>
+    <button type="button" class="seven btn2" onclick="showDigit(7)">7</button>
+    <button type="button" class="eight btn2" onclick="showDigit(8)">8</button>
+    <button type="button" class="nine btn2" onclick="showDigit(9)">9</button>
+    <button type="button" class="zero btn2" onclick="showDigit(0)">0</button>
+    <button type="button" class="plus btn2" onclick="showDigit('+')">+</button>
+    <button type="button" class="minus btn2" onclick="showDigit('-')">-</button>
+    <button type="button" class="product btn2" onclick="showDigit('x')">x</button>
+    <button type="button" class="divition btn2" onclick="showDigit('/')">/</button>
+    <button type="button" class="equals btn2" onclick="showDigit('=')">=</button>
     <button type="button" class="AC btn2">AC</button>
-    <button type="button" class="square-root btn2">sqr</button>
-    <button type="button" class="dot btn2">.</button>
-    <button type="button" class="power btn2">pwr</button>
-    <button type="button" class="exponent btn2">exp</button>
+    <button type="button" class="square-root btn2" onclick="showDigit('sqrt')">sqr</button>
+    <button type="button" class="dot btn2" onclick="showDigit('.')">.</button>
+    <button type="button" class="power btn2" onclick="showDigit('pwr')">pwr</button>
+    <button type="button" class="modlue btn2" onclick="showDigit('%')">%</button>
 </div>
 </body>
 </html>
