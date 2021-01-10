@@ -13,6 +13,17 @@ body{
 }
 .calculator-body{
     display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+            "result result result AC"
+            "square-root power exponent plus"
+            "one two three minus"
+            "four five six product"
+            "seven eight nine divition"
+            "zero zero dot equals";
+    justify-items: center;
     height: 35em;
     width: 25em;
     position: fixed;
@@ -23,3 +34,25 @@ body{
     background-color: white;
     border-radius: 5px;
 }
+/*placing numbers in the grid*/
+.result { grid-area: result; margin-top: 2em}
+.one { grid-area: one; }
+.two { grid-area: two; }
+.three { grid-area: three; }
+.four { grid-area: four; }
+.five { grid-area: five; }
+.six { grid-area: six; }
+.seven { grid-area: seven; }
+.eight { grid-area: eight; }
+.nine { grid-area: nine; }
+.zero { grid-area: zero; }
+.plus { grid-area: plus; }
+.minus { grid-area: minus; }
+.product { grid-area: product; }
+.divition { grid-area: divition; }
+.equals { grid-area: equals; }
+.AC { grid-area: AC; margin-top: 2em}
+.square-root { grid-area: square-root; }
+.dot { grid-area: dot; }
+.power { grid-area: power; }
+.exponent { grid-area: exponent; }
