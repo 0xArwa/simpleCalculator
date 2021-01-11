@@ -6,7 +6,9 @@ function showDigit(digit){
     dig = document.getElementById("result").innerHTML = digit;
     return dig;
 }
-
+const clearAll =() => {
+    return document.getElementById("result").innerHTML = '';
+}
 const calculateAddition = (num1 , num2) => {
     return num1 + num2;
 }
