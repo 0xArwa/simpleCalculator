@@ -1,35 +1,56 @@
 <!DOCTYPE html>
+<!-- @ 0 x A r w a -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="calc_JS.js"></script>
     <link rel="stylesheet" href="calc_styleSheet.css">
+    <script src="calc_JS.js"></script>
     <title>Calculator</title>
 </head>
 <body>
 <div class="calculator-body">
-    <button type="button" class="result btn">.</button>
-    <button type="button" class="one btn2"> 1 </button>
-    <button type="button" class="two btn2">2</button>
-    <button type="button" class="three btn2">3</button>
-    <button type="button" class="four btn2">4</button>
-    <button type="button" class="five btn2">5</button>
-    <button type="button" class="six btn2">6</button>
-    <button type="button" class="seven btn2">7</button>
-    <button type="button" class="eight btn2">8</button>
-    <button type="button" class="nine btn2">9</button>
-    <button type="button" class="zero btn2">0</button>
-    <button type="button" class="plus btn2">+</button>
-    <button type="button" class="minus btn2">-</button>
-    <button type="button" class="product btn2">x</button>
-    <button type="button" class="divition btn2">/</button>
-    <button type="button" class="equals btn2">=</button>
-    <button type="button" class="AC btn2">AC</button>
-    <button type="button" class="square-root btn2">sqr</button>
-    <button type="button" class="dot btn2">.</button>
-    <button type="button" class="power btn2">pwr</button>
-    <button type="button" class="exponent btn2">exp</button>
+    <button type="button" class="result btn" id="result" ></button>
+    <button type="button" class="one btn2" onclick="showDigit(1)"> 1 </button>
+    <button type="button" class="two btn2" onclick="showDigit(2)">2</button>
+    <button type="button" class="three btn2" onclick="showDigit(3)">3</button>
+    <button type="button" class="four btn2" onclick="showDigit(4)">4</button>
+    <button type="button" class="five btn2" onclick="showDigit(5)">5</button>
+    <button type="button" class="six btn2" onclick="showDigit(6)">6</button>
+    <button type="button" class="seven btn2" onclick="showDigit(7)">7</button>
+    <button type="button" class="eight btn2" onclick="showDigit(8)">8</button>
+    <button type="button" class="nine btn2" onclick="showDigit(9)">9</button>
+    <button type="button" class="zero btn2" onclick="showDigit(0)">0</button>
+    <button type="button" class="plus btn2" onclick="showDigit('+')">+</button>
+    <button type="button" class="minus btn2" onclick="showDigit('-')">-</button>
+    <button type="button" class="product btn2" onclick="showDigit('x')">&#215;</button>
+    <button type="button" class="division btn2" onclick="showDigit(' \t\u00F7 ')">&#247;</button>
+    <button type="button" class="equals btn2" onclick="calculate()">=</button>
+    <button type="button" class="AC btn2" onclick="clearAll()">AC</button>
+    <button type="button" class="square-root btn2" onclick="showDigit('Math.sqrt(')">&radic;x</button>
+    <button type="button" class="dot btn2" onclick="showDigit('.')">.</button>
+    <button type="button" class="power btn2" onclick="showDigit('**')">pwr</button>
+    <button type="button" class="modlue btn2" onclick="showDigit('%')">%</button>
 </div>
+<div class="sentence"> Simple Calculator </div>
+<!-- div for the contact section -->
+<div class="contact-box">
+        <div class="contact-icons">
+            <a  href="mailto:arwaao@icloud.com"  target="_blank">
+                <img src="https://i.pinimg.com/originals/1b/3b/ec/1b3bec070f7bb1c007dbaaeafaeb21b7.png" alt="email" class="logo"></a>
+            <a href="https://github.com/DigitalVillian"  target="_blank" >
+                <img src="https://cdn0.iconfinder.com/data/icons/octicons/1024/mark-github-512.png" alt="github" class="logo"></a>
+            <a  href="https://twitter.com/0xArwa"   target="_blank" >
+                <img src="https://image.flaticon.com/icons/png/512/23/23681.png" alt="twitter" class="logo"></a>
+            <a href="https://stackoverflow.com/users/14167940/arwa?tab=profile" target="_blank">
+                <img src="https://www.shareicon.net/data/2016/07/09/118339_stackoverflow_512x512.png"
+                     alt="stack-over-flow" class="logo"></a>
+            <a href="https://codepen.io/digital_villian" target="_blank">
+                <img src="https://blog.codepen.io/wp-content/uploads/2012/06/Button-Black-Large.png" alt="codePen" class="logo"></a>
+                <!-- logos and links -->
+        </div>
+</div>
+<footer>This page was designed by Arwa Ali</footer>
+<!--all rights are saved to @ 0 x A r w a -->
 </body>
 </html>
