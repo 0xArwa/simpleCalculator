@@ -2,12 +2,72 @@
 code written by : @ 0 x A r w a
  */
 let dig;
+let button =  document.getElementById("result").innerHTML;
+let count = 0;
+
+function showDigit(digit){
+    document.getElementById("result").innerHTML += digit;
+}
+function clearAll (){
+    document.getElementById("result").innerHTML = '';
+}
+function calculate() {
+        document.getElementById("result").innerHTML = eval(document.getElementById("result").innerHTML);
+}
+/*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ */
+/* Javascript calculator
+code written by : @ 0 x A r w a
+ */
+let dig;
 let button =  document.getElementById("result");
 let count = 0;
 button.onclick = updateResult();
 function showDigit(digit){
-        dig =  document.getElementById("result").innerHTML = digit;
-        return dig + '';
+    dig =  document.getElementById("result").innerHTML = digit;
+    return dig + '';
 }
 /* logically i need to store the number after each click 
 modify the code do it woulf reseve the numbers based on 
