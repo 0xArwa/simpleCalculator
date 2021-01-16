@@ -1,3 +1,6 @@
+/*
+code written by : @ 0 x A r w a
+ */
 :root{
     /*add fonts and colors here*/
     --darkBlue : #011627;
@@ -25,7 +28,7 @@ body{
     gap: 0px 0px;
     grid-template-areas:
             "result result result AC"
-            "square-root power exponent plus"
+            "square-root power modlue plus"
             "one two three minus"
             "four five six product"
             "seven eight nine divition"
@@ -46,53 +49,62 @@ body{
     -moz-box-shadow: 13px 13px 17px -1px rgba(0,0,0,0.75);
 }
 /*placing numbers in the grid*/
-.result { grid-area: result;}
-.one { grid-area: one; }
-.two { grid-area: two; }
-.three { grid-area: three; }
-.four { grid-area: four; }
-.five { grid-area: five; }
-.six { grid-area: six; }
-.seven { grid-area: seven; }
-.eight { grid-area: eight; }
-.nine { grid-area: nine; }
-.zero { grid-area: zero; width: 12em !important;
-border-radius: 10px !important; margin-right: 30px !important;}
-.plus { grid-area: plus; }
-.minus { grid-area: minus; }
-.product { grid-area: product; }
-.divition { grid-area: divition; }
+.result { grid-area: result;}  .one { grid-area: one; }
+.two { grid-area: two; }  .three { grid-area: three; }
+.four { grid-area: four; }  .five { grid-area: five; }
+.six { grid-area: six; }  .seven { grid-area: seven; }
+.eight { grid-area: eight; }  .nine { grid-area: nine; }
+.zero { grid-area: zero; width: 10em !important;
+border-radius: 10px !important; margin-right: 18px !important;}
+.plus { grid-area: plus; }  .minus { grid-area: minus; }
+.product { grid-area: product; }  .divition { grid-area: divition; }
 .equals { grid-area: equals; }
 .AC { grid-area: AC ; background-color: var(--boldRed) !important ;}
 .AC:hover{background-color: var(--ashyRed) !important ;}
 .square-root { grid-area: square-root; }
 .dot { grid-area: dot; }
-.power { grid-area: power; }
-.exponent { grid-area: exponent; }
+.power { grid-area: power; }  .modlue { grid-area: modlue; }
 
 .btn{
-    padding: 30px;
-    width: 16rem;
+    width: 16rem; height: 3.5em;
     background-color: var(--ashyTiffany);
     border-radius: 5px;
     box-shadow:inset 0 0 5px !important;
+    font-size: 20px;
 }
 .btn2{
-    padding: 2rem;
-    width: 5rem;
+    padding: 1.75rem; width: 5rem;
     background-color: var(--strongYellow);
     border-radius: 10px;
 }
 button{
-    margin: auto;
-    border: none;
+    margin: auto; padding: initial; border: none;
     /*buttons shadow */
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
     -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    font-weight: bold; font-size: 17px;
+    font-family: monospace;
+    text-align: -moz-center;
 }
 /*remove blue borders after clicking the number*/
 button:focus { outline: none; }
 .btn2:hover{
     background-color: var(--ashyYellow);
+}
+.sentence{
+    font-size: 3rem; color: whitesmoke; font-family: monospace;
+    margin: 3rem; text-align: -webkit-center;
+}
+.logo{
+    filter: brightness(0) invert(1); display: block;
+    width: 5rem; height: auto; margin: 50px 20px ;
+}
+footer{
+    margin: -20px auto auto; text-align: -webkit-center;
+    color: whitesmoke; font-size: 14px;
+    font-family: "PT Sans";
+}
+.logo , .sentence , footer{
+    opacity: 0.5;
 }
