@@ -2,19 +2,31 @@
 code written by : @ 0 x A r w a
  */
 let dig;
-let button =  document.getElementById("result").innerHTML;
-let count = 0;
-
 function showDigit(digit){
-    document.getElementById("result").innerHTML += digit;
+   dig = document.getElementById("result").innerHTML += digit;
 }
 function clearAll (){
     document.getElementById("result").innerHTML = '';
 }
+function sqrt() {
+    document.getElementById("result").innerHTML += '&radic;';
+}
 function calculate() {
-        document.getElementById("result").innerHTML = eval(document.getElementById("result").innerHTML);
+    if(dig.match(/^[0-9]+$/) != null) {
+        document.getElementById("result").innerHTML = 'use an operator first';
+    }if(dig.match(/&radic;/)){
+        dig.replace('&radic;','');
+        document.getElementById("result").innerHTML =  eval(Math.sqrt(document.getElementById("result").innerHTML));
+        console.log(dig);
+    }else{
+        try {
+            document.getElementById("result").innerHTML = eval(document.getElementById("result").innerHTML);
+        }catch (e) {
+            console.error(e);
+            document.getElementById("result").innerHTML = 'not an expression';
+        }
+    }
 }
-/*
 
 
 
@@ -57,28 +69,6 @@ function calculate() {
 
 
 
- */
-/* Javascript calculator
-code written by : @ 0 x A r w a
- */
-let dig;
-let button =  document.getElementById("result");
-let count = 0;
-button.onclick = updateResult();
-function showDigit(digit){
-    dig =  document.getElementById("result").innerHTML = digit;
-    return dig + '';
-}
-/* logically i need to store the number after each click 
-modify the code do it woulf reseve the numbers based on 
-numbers of clicks using a count --- very importnant must finish soon
- */
-function updateResult() {
-    button.textContent = dig;
-}
-const clearAll =() => {
-    return document.getElementById("result").innerHTML = '';
-}
 const calculateAddition = (num1 , num2) => {
     return num1 + num2;
 }
