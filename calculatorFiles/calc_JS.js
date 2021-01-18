@@ -1,6 +1,7 @@
 /* Javascript calculator
 code written by : @ 0 x A r w a
  */
+/**/
 let dig;
 function showDigit(digit){
     dig = document.getElementById("result").innerHTML += digit;
@@ -22,14 +23,17 @@ function calculate() {
                 dig = dig.replaceAll(/√/g, '');
                 document.getElementById("result").innerHTML = (Math.sqrt(dig));
                 //console.log(Math.sqrt(25)); test value worked
-                //if number divided by zero then result = undefined
-            }else if(dig.match(/\u00F7/g) && dig.match(0)) {
-                document.getElementById("result").innerHTML = undefined;
-            }else if(dig.match('.')){
-                dig = eval(document.getElementById("result").innerHTML);
-                document.getElementById("result").innerHTML = Math.fround(dig);
+
+            }else if(dig.match(/\u00F7/g)) {
+               dig = dig.replaceAll(/\u00F7/g,'/');
+                if(dig.match('/ 0')) {
+                    //if number divided by zero then result = undefined
+                    document.getElementById("result").innerHTML = 'undefined';
+                }else {
+                    document.getElementById("result").innerHTML = eval(dig);
+                    }
             }else{
-                document.getElementById("result").innerHTML = eval(document.getElementById("result").innerHTML);
+                document.getElementById("result").innerHTML = eval(dig);
             }
             }catch (e) {
                 console.error(e);
@@ -37,6 +41,16 @@ function calculate() {
             }
         }
     }
+
+
+
+
+
+
+
+
+
+
 
 
 
